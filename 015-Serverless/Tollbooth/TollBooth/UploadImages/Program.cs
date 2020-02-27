@@ -21,17 +21,18 @@ namespace UploadImages
 
         static int Main(string[] args)
         {
-            if (args.Length == 0)
-            {
-                Console.WriteLine("You must pass the Blob Storage connection string as an argument when executing this application.");
-                Console.ReadLine();
-                return 1;
-            }
-            else
-            {
-                BlobStorageConnection = args[0];
-            }
-
+            /*            if (args.Length == 0)
+                        {
+                            Console.WriteLine("You must pass the Blob Storage connection string as an argument when executing this application.");
+                            Console.ReadLine();
+                            return 1;
+                        }
+                        else
+                        {
+                            BlobStorageConnection = args[0];
+                        }
+            */
+            BlobStorageConnection = "DefaultEndpointsProtocol=https;AccountName=serverlesswth;AccountKey=PEejGl/BP9OGHkPkwaAOy5iJtOZntbotj9CqWhDV7TKO+Y1BGfSe/U+TbOL/GenYzB6WKkIlM5T3SfA4GJYn/Q==;EndpointSuffix=core.windows.net";
             int choice = 1;
             Console.WriteLine("Enter one of the following numbers to indicate what type of image upload you want to perform:");
             Console.WriteLine("\t1 - Upload a handful of test photos");
